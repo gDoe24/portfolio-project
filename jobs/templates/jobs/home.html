@@ -18,42 +18,13 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="{%static 'hipster_cards.css' %}"></link>
+<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css' %}" rel="stylesheet">
+<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css' %}" rel="stylesheet">
+<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css' %}" rel="stylesheet"> 
 
-
+<link href="{% static 'home.css' %}" rel="stylesheet"></link>
+    
     <style>
-      body{
-        background-color: white;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-       header nav {
-        
-        background-color: transparent;
-      }
-      header nav.scrolled{
-
-        background-color:#0E0B16;
-        transition: .7s;
-      }
-      a.nav-item{
-        -webkit-transition: .5s ease;
-      }
-      a.nav-item:hover{
-        text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.8),0 -4px 15px rgba(255,255,255,0.5);
-
-      }
       #jumbo {
       margin-top: -3%;
       background-image: url("{% static 'nasa-Q1p7bh3SHj8-unsplash.jpg' %}");
@@ -61,128 +32,6 @@
       background-repeat: no-repeat;
       background-size: cover;
       height: 105vh;
-     }
-     .banner-text{
-      position: absolute;
-      top:40%;
-      left:50%;
-      transform: translate(-10%,-50%);
-     }
-     .banner-text h1{
-      font-size:80px;
-      font-weight:300;
-      letter-spacing:2px;
-      margin-bottom: 20px;
-     }
-     .banner-text p{
-      color:white;
-      font-family:"josefin sans",sans serif;
-      font-size:40px;
-      font-weight:300;
-      letter-spacing:2px;
-      text-align:right;
-     }
-     ul{
-      text-align:right;
-     }
-     ul a {
-      letter-spacing: 1.5rem;
-     color:white;
-   }
-   ul a.hover{
-    color:#EEE8AA;
-    -webkit-transition: .5s ease;
-    text-shadow: 0px 1px 4px rgb(255,255,0), 1px -1px 2px rgba(255,255,0,.5) ;
-
-   }
-
-   h1#appTitle{
-    font-family: "simplifica", sans serif;
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing:2px;
-    text-align: left;
-    margin-left: 4%;
-    color: white;
-    text-shadow: -1px .5px 3px #d1d1e0;
-    display: inline-block;
-    padding-right: 40px;
-    border-bottom: 1px solid #b3b3b3;
-
-   }
-     .album{
-      height:100vh;
-      
-
-     }
-     #app {
-      top: 10vh;
-     }
-     
-.arrow {
-  color:white;
-    position:fixed;
-    left:50%;
-    bottom:0;
-    margin-top:-25px;
-    margin-left:-25px;
-    height:8%;
-    width:50px;
-    cursor:pointer;
-    -webkit-animation:arrow 1s infinite;
-    -moz-animation:arrow 1s infinite;
-    -o-animation:arrow 1s infinite;
-    animation:arrow 1s infinite;
-    
-  }
-  .arrow.scrolled{
-    opacity:0;
-  }
-  @-webkit-keyframes arrow {
-    0%       { bottom:0px; }
-    50%      { bottom:15px; }
-    100%     {bottom:30;}
-  }
-  
-   @-moz-keyframes arrow {
-    0%       { bottom:0px; }
-    50%      { bottom:15px; }
-    100%     {bottom:30;}
-  }
-  
-   @-o-keyframes arrow {
-    0%       { bottom:0px; }
-    50%      { bottom:15px; }
-    100%     {bottom:30;}
-  }
-  
-   @keyframes arrow {
-    0%       { bottom:0px; }
-    50%      { bottom:15px; }
-    100%     {bottom:30;}
-  }
-  #about{
-    padding-top: 5%;
-    background-color: transparent;
-  }
-  #greg{
-    padding-top: 10%;
-    font-family: "bebas neue",
-    font-weight: 300;
-  }
-  #greg about
-  #greg p{
-    color:white;
-  }
-  #pic{
-    border-radius: 5px;
-    border: 2px solid white;
-  }
-     /*.btn{
-      
-     }*/
-     #icon{
-      size:6px;
      }
     </style>
     <!-- Custom styles for this template -->
@@ -259,7 +108,7 @@
                         <h4 class="title">{{job.summary}}</h4>
                     </div>
                     <div class="footer text-center" style="margin:20px">
-                         <a href="#" class="btn btn-neutral btn-round" style="margin:10px">GitHub</a>
+                         <a href="{{job.github}}" class="btn btn-neutral btn-round" style="margin:10px">GitHub</a>
                          <a href="{{job.link}}" class="btn btn-neutral btn-round" style="margin:7px">Demo</a>
                     </div>
                     <div class="filter"></div>
@@ -290,31 +139,10 @@
 
 <script src="https://kit.fontawesome.com/73fdd29606.js"></script>
 
-<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css' %}" rel="stylesheet">
-<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css' %}" rel="stylesheet">
-<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css' %}" rel="stylesheet"> 
+
 <script src="{% static 'jquery.min.js' %}"></script>
 <script src="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.min.js' %}"></script>
 <script src="{% static 'hipster-cards.js' %}"></script>
-<script>
-
-  $(document).ready(function(){
-    var wind = $(window);
-    wind.scroll(function(){
-    $('header nav').toggleClass('scrolled', $(this).scrollTop()> 400);
-     /*$('body').*/
-  });
-    wind.scroll(function(){
-      $('.arrow').toggleClass('scrolled', $(this).scrollTop()> 50);
-    });
-    $("ul a").hover(function(){
-      $(this).toggleClass('hover');
-    });
-    $('.arrow').click(function(e){
-      $('html, body').animate({
-        scrollTop: $('#about').offset().top
-    },1000);
-    })
-});
-</script></body>
+<script src="{% static 'homeStyle.js' %}"></script>
+</body>
 </html>
