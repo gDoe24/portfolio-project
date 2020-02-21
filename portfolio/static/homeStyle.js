@@ -3,6 +3,7 @@
     var wind = $(window);
     wind.scroll(function(){
     $('header nav').toggleClass('scrolled', $(this).scrollTop()> 400);
+    $('.nav-item').toggleClass('scrolled', $(this).scrollTop()> 400);
      /*$('body').*/
   });
     wind.scroll(function(){
