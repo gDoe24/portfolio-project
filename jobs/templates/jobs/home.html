@@ -22,7 +22,7 @@
 <link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css' %}" rel="stylesheet">
 <link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css' %}" rel="stylesheet"> 
 
-<link href="{% static 'home.css' %}" rel="stylesheet"></link>
+<link href="{% static 'style.css' %}" rel="stylesheet"></link>
     
     <style>
      
@@ -36,7 +36,7 @@
   </head>
   <body>
      <header>
-<nav class="navbar navbar-expand-md fixed-top" style="">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="">
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -111,7 +111,8 @@
       <img id="pic" src="{% static 'sasuke.jpg' %}" class="img-fluid-max" alt="responsive-image" height = 100% width = 100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img"/>
    </div>
   </section> 
-
+<!--Project section-->
+<section id="projects">
   <!-- Title for Apps -->
   <div id= "appTitle" class="container pb-5">
     <h1 id="appTitle">Applications</h1>
@@ -122,21 +123,17 @@
     <div class="container">
       <div id = "row" class= 'row'>
         {% for job in jobs.all %}
-        <div id ="cards" class="card card-with-border bg-transparent" 
-        style="">
+        <div id ="cards" class="card card-with-border bg-transparent">
         
             <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap" style="">
 
-            <div class="mx-auto"style="position:absolute; width:100%; text-align:center;top:38%" >
-              <a href="#" class="card-link btn btn-sm btn-round px-3" 
-              style="color:white; border: 2.5px solid #1C3FF6">Demo</a>
-              <a href="#" class="card-link btn btn-sm btn-round px-3" 
-              style="color:white; border: 2.5px solid #1C3FF6">Github</a>
+            <div class="btn-container mx-auto">
+              <a href="#" class="card-link btn btn-sm btn-round px-3">Demo</a>
+              <a href="#" class="card-link btn btn-sm btn-round px-3">Github</a>
             </div>
 
-            <div class="card-body pt-0" style="color:white">
-              <h4 class="card-title" style="color:#01D7FB; font-family:Cambria; 
-              transform:translate(0,-5%);">{{ job.title }}</h4>
+            <div class="card-body pt-0">
+              <h4 class="card-title">{{ job.title }}</h4>
               <p class="card-text pb-3">{{ job.summary }}</p>
             </div>
           </div>
@@ -146,27 +143,7 @@
         </div>
 
 
-        <div id ="album" class="album py-5 rounded position-relative"  >
-    <div class="container">
-      <div id = "row" class= 'row'>
-        {% for job in jobs.all %}
-        <div class="card card-with-border" data-background="image" data-src="{{ job.image.url }}" width="100%" height="225">
-                    <div class="header">
-                    </div>
-
-                    <div class="content text-center">
-                        <h4 class="title">{{job.summary}}</h4>
-                    </div>
-                    <div class="footer text-center">
-                         <a href="#" class="btn btn-neutral btn-round">Read article</a>
-                         <a href="#" class="btn btn-neutral btn-round">Read article</a>
-                    </div>
-                    <div class="filter"></div>
-                </div> 
-        {% endfor %}
-          </div>
-        </div>
-        </div>
+    </section>   
 </main>
 
 <footer class="text-muted  ">
