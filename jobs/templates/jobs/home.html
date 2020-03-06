@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang="en">
-{% load staticfiles %}
+{% load static %}
 
   <head>
 
@@ -18,186 +18,33 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="{%static 'hipster_cards.css' %}"></link>
+<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css' %}" rel="stylesheet">
+<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css' %}" rel="stylesheet">
+<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css' %}" rel="stylesheet"> 
 
-
-    <style>
-      body{
-        background-color: white;
-      }
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-       header nav {
-        
-        background-color: transparent;
-      }
-      header nav.scrolled{
-
-        background-color:#0E0B16;
-        transition: .7s;
-      }
-      a.nav-item{
-        -webkit-transition: .5s ease;
-      }
-      a.nav-item:hover{
-        text-shadow: 0px -2px 0px rgba(0,0,0,1), 0 0 5px rgba(255,255,255,0.8),0 -4px 15px rgba(255,255,255,0.5);
-
-      }
-      #jumbo {
-      margin-top: -3%;
-      background-image: url("{% static 'nasa-Q1p7bh3SHj8-unsplash.jpg' %}");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 105vh;
-     }
-     .banner-text{
-      position: absolute;
-      top:40%;
-      left:50%;
-      transform: translate(-10%,-50%);
-     }
-     .banner-text h1{
-      font-size:80px;
-      font-weight:300;
-      letter-spacing:2px;
-      margin-bottom: 20px;
-     }
-     .banner-text p{
-      color:white;
-      font-family:"josefin sans",sans serif;
-      font-size:40px;
-      font-weight:300;
-      letter-spacing:2px;
-      text-align:right;
-     }
-     ul{
-      text-align:right;
-     }
-     ul a {
-      letter-spacing: 1.5rem;
-     color:white;
-   }
-   ul a.hover{
-    color:#EEE8AA;
-    -webkit-transition: .5s ease;
-    text-shadow: 0px 1px 4px rgb(255,255,0), 1px -1px 2px rgba(255,255,0,.5) ;
-
-   }
-
-   h1#appTitle{
-    font-family: "simplifica", sans serif;
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing:2px;
-    text-align: left;
-    margin-left: 4%;
-    color: white;
-    text-shadow: -1px .5px 3px #d1d1e0;
-    display: inline-block;
-    padding-right: 40px;
-    border-bottom: 1px solid #b3b3b3;
-
-   }
-     .album{
-      height:100vh;
-      
-
-     }
-     #app {
-      top: 10vh;
-     }
-     
-.arrow {
-  color:white;
-    position:fixed;
-    left:50%;
-    bottom:0;
-    margin-top:-25px;
-    margin-left:-25px;
-    height:8%;
-    width:50px;
-    cursor:pointer;
-    -webkit-animation:arrow 1s infinite;
-    -moz-animation:arrow 1s infinite;
-    -o-animation:arrow 1s infinite;
-    animation:arrow 1s infinite;
+<link href="{% static 'style.css' %}" rel="stylesheet"></link>
     
-  }
-  .arrow.scrolled{
-    opacity:0;
-  }
-  @-webkit-keyframes arrow {
-    0%       { bottom:0px; }
-    50%      { bottom:15px; }
-    100%     {bottom:30;}
-  }
-  
-   @-moz-keyframes arrow {
-    0%       { bottom:0px; }
-    50%      { bottom:15px; }
-    100%     {bottom:30;}
-  }
-  
-   @-o-keyframes arrow {
-    0%       { bottom:0px; }
-    50%      { bottom:15px; }
-    100%     {bottom:30;}
-  }
-  
-   @keyframes arrow {
-    0%       { bottom:0px; }
-    50%      { bottom:15px; }
-    100%     {bottom:30;}
-  }
-  #about{
-    padding-top: 5%;
-    background-color: transparent;
-  }
-  #greg{
-    padding-top: 10%;
-    font-family: "bebas neue",
-    font-weight: 300;
-  }
-  #greg about
-  #greg p{
-    color:white;
-  }
-  #pic{
-    border-radius: 5px;
-    border: 2px solid white;
-  }
-     /*.btn{
+    <style>
+     
       
-     }*/
-     #icon{
-      size:6px;
-     }
+      
+  
+    
     </style>
     <!-- Custom styles for this template -->
   
   </head>
   <body>
      <header>
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark" >
-  <a class="navbar-brand" href="{% url 'home' %}"></a>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="">
+  
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <a class="nav-brand nav-link active" href="{% url 'home' %}">Word</a>
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link active" href="{% url 'home' %}">Home </a>
+      
       <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
       <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
       <a class="nav-item nav-link" href="#">Links</a>
@@ -205,13 +52,32 @@
     </div>
   </div>
 </nav>
+<div>
 </header>
 
-<main role="main" style="background-image: url({% static 'bg.jpg' %}); background-size: 100% 100%;">
-<div id = "jumbo" class="jumbotron img-fluid" style="background-color: #0E0B16">
+<main role="main">
+<div id = "jumbo" class="jumbotron img-fluid">
+<section class="side-menu ">
+      <div class="container  d-none d-md-block" style="text-align:left;">
+      <ul class="side-menu-list">
+      <div class="dropdown">
+      <li><a class="dropdown side-menu-item" data-toggle="dropdown" style="color:white;">Contact</a></li>
+        <ul class="dropdown-menu">
+          <a href="#" style="" class="dropdown-item" >LinkedUp</a>
+            <a href="https://github.com/gDoe24"  style=""class="dropdown-item">Github</a>
+            <a href="#" style="" class="dropdown-item">Facechat</a>
+          </ul>
+          </div>
+        <li><a class="side-menu-item" href="#" style="padding-top:20px;">Resume</a></li>
+        <li><a class="side-menu-item" href="#">About</a></li>
+        <li><a class="side-menu-item" href="#">Portfolio</a></li>
+        </ul>
+        
+        </div>
+      </section>
     <div class="banner-text" >
-      <h1 class="display-4 font-italic" style="color:white">Greg Keel</h1>
-      <p class="lead my-3">My Portfolio</p>
+      <h1 class="display-4 font-italic name" style="color:white">Greg Keel</h1> 
+      <p class="lead my-3 my-portfolio">My Portfolio</p>
       <p class="lead mb-0"><a href="#" class="text-white font-weight-bold"></a>
       <ul class="icons">
               <a href="#" class="fab fa-linkedin" style="font-size:2rem" ><span class="label" ></span></a>
@@ -220,60 +86,67 @@
             </ul></p>
       
     </div>
+    <!--<img id="banner-img"src="" >--> 
     <div class ="arrow">
       <i class="far fa-arrow-alt-circle-down" style= "font-size: 3rem;"></i>
     </div>
   </div>
-  <section id="about" class="jumbotron left">
+  <section id="about" class="jumbotron left" style="height: 120vh;">
+    <div class="rectangle"></div>
+    <div id="square"class="d-none d-sm-block rectangle"></div>
     <div class="container">
       <div class="row">
         <div class="col-8">
-      <h1 id="greg" class="jumbotron-heading" >Hi I'm Greg</h1>
-        <p class="lead d" style="color: white;">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+      <h1 id="greg" class="jumbotron-heading" >About Me</h1>  
+      </div>
+    </div>
+ </div>
+      <div class="container container-two">
+        <p class="lead d">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
       <p>
         <a href="#" class="btn btn-primary my-2">Contact</a>
       </p>
     </div>
-    <div class="col-4 d-none d-md-block">
+    <div class=" d-none d-sm-block">
       <img id="pic" src="{% static 'sasuke.jpg' %}" class="img-fluid-max" alt="responsive-image" height = 100% width = 100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img"/>
    </div>
- </div>
-    </div>
-  </section>
-
+  </section> 
+<!--Project section-->
+<section id="projects">
   <!-- Title for Apps -->
-  <div id= "appTitle" class="container display: flex">
+  <div id= "appTitle" class="container pb-5">
     <h1 id="appTitle">Applications</h1>
   </div>
 <!-- for loop to run through this for every job -->
 
-  <div id ="album" class="album py-5 rounded position-relative"  >
+    <div id ="album" class="album py-5 position-relative"  >
     <div class="container">
       <div id = "row" class= 'row'>
         {% for job in jobs.all %}
-        <div class="card card-with-border" data-background="image" data-src="{{ job.image.url }}" width="100%" height="225">
-                    <div class="header">
-                    </div>
+        <div id ="cards" class="card card-with-border bg-transparent">
+        
+            <img class="card-img-top" src="{{ job.image.url }}" alt="Card image cap" style="">
 
-                    <div class="content text-center">
-                        <h4 class="title">{{job.summary}}</h4>
-                    </div>
-                    <div class="footer text-center">
-                         <a href="#" class="btn btn-neutral btn-round">Read article</a>
-                         <a href="#" class="btn btn-neutral btn-round">Read article</a>
-                    </div>
-                    <div class="filter"></div>
-                </div> 
+            <div class="btn-container mx-auto">
+              <a href="#" class="card-link btn btn-sm btn-round px-3">Demo</a>
+              <a href="#" class="card-link btn btn-sm btn-round px-3">Github</a>
+            </div>
+
+            <div class="card-body pt-0">
+              <h4 class="card-title">{{ job.title }}</h4>
+              <p class="card-text pb-3">{{ job.summary }}</p>
+            </div>
+          </div>
         {% endfor %}
           </div>
         </div>
         </div>
-        
-    
 
+
+    </section>   
 </main>
 
-<footer class="text-muted">
+<footer class="text-muted  ">
   <div class="container text-center">
     <ul class="icons">
               <a href="#" class="fab fa-linkedin" style="font-size:1.3rem"><span class="label" >Linkedin</span></a>
@@ -290,31 +163,30 @@
 
 <script src="https://kit.fontawesome.com/73fdd29606.js"></script>
 
-<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.min.css' %}" rel="stylesheet">
-<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.structure.min.css' %}" rel="stylesheet">
-<link href="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.theme.min.css' %}" rel="stylesheet"> 
+
 <script src="{% static 'jquery.min.js' %}"></script>
 <script src="{% static 'jquery-ui.custom/jquery-ui-1.12.1.custom/jquery-ui.min.js' %}"></script>
 <script src="{% static 'hipster-cards.js' %}"></script>
+<script src="{% static 'homeStyle.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/CSSRulePlugin3.min.js"></script>
 <script>
 
-  $(document).ready(function(){
-    var wind = $(window);
-    wind.scroll(function(){
-    $('header nav').toggleClass('scrolled', $(this).scrollTop()> 400);
-     /*$('body').*/
-  });
-    wind.scroll(function(){
-      $('.arrow').toggleClass('scrolled', $(this).scrollTop()> 50);
+    var rule = CSSRulePlugin.getRule('')
+    
+
+    var t1 = new TimelineMax();
+    t1.from('.name',{timeScale: 0, opacity:0, duration:3,y:-70,skewY: "30deg", ease: Power2.easeOut});
+    t1.from(".side-menu-list li",{
+      x: -300,
+      opacity:0,
+      duration:2,
+      ease: "power2.out",
+      stagger:.4,
     });
-    $("ul a").hover(function(){
-      $(this).toggleClass('hover');
-    });
-    $('.arrow').click(function(e){
-      $('html, body').animate({
-        scrollTop: $('#about').offset().top
-    },1000);
-    })
-});
-</script></body>
+
+    
+</script>
+</body>
 </html>
