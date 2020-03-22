@@ -91,7 +91,7 @@
       <i class="far fa-arrow-alt-circle-down" style= "font-size: 3rem;"></i>
     </div>
   </div>
-  <section id="about" class="jumbotron left" style="height: 120vh;">
+  <section id="about" class="jumbotron-left" style="height: 120vh;">
    <div class="container">
     <div class="row">
     <div class="col-md-4 col-lg-5">
@@ -103,9 +103,13 @@
       </div>
       <div class="row" >
       <div class="mx-auto skill-list">
-        <div class="circle" ></div>
-          <div class="arc">
-          </div>
+
+         <div class="circle" >
+          <div class="left"><span></span></div>
+          <div class="right"><span></span></div>
+        </div>  
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    
       </div>
       </div>
     
@@ -133,6 +137,9 @@
       <!--<img id="pic" src="{% static 'sasuke.jpg' %}" class="img-fluid-max" alt="responsive-image" height = 100% width = 100% preserveAspectRatio="xMidYMid slice" focusable="false" role="img"/>-->
    </div>
   </section> 
+
+  
+        
 <!--Project section-->
 <section id="projects">
   <!-- Title for Apps -->
@@ -168,7 +175,8 @@
         </div>
 
 
-    </section>   
+    </section> 
+   
 </main>
 
 <footer class="text-muted  ">

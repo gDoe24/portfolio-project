@@ -201,73 +201,124 @@ a.nav-item:hover {
           transform: translate(0, 110%);
 }
 
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin: 8px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  border-color: transparent #28E88E transparent transparent;
+}
+
 .circle {
-  position: relative;
-  width: 4em;
-  height: 4em;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  margin: 12.5px;
   border-radius: 50%;
-  -webkit-transform: var(--center);
-          transform: var(--center);
-  background: lightblue;
 }
 
-.arc {
-  position: relative;
-  width: 4.1em;
-  height: 4.1em;
-  border-radius: 50%;
-  -webkit-transform: var(--center);
-          transform: var(--center);
-  background: transparent;
-  border: 1px solid;
-  border-color: red red red red;
-  -webkit-animation: rotate-s-loader 2s infinite;
-          animation: rotate-s-loader 2s infinite;
+.lds-ring div:nth-child(1) {
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
 }
 
-@-webkit-keyframes rotate-s-loader {
+.lds-ring div:nth-child(2) {
+  -webkit-animation: lds-ring2 1s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+          animation: lds-ring2 1s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation: lds-ring3 0.8s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+          animation: lds-ring3 0.8s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    border-color: transparent transparent transparent transparent;
-  }
-  33% {
-    -webkit-transform: rotate(120deg);
-            transform: rotate(120deg);
-    border-color: red transparent transparent transparent;
-  }
-  66% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
-    border-color: red red transparent transparent;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    border-color: red red red transparent;
+    -webkit-transform: rotate(225.5deg);
+            transform: rotate(225.5deg);
   }
 }
 
-@keyframes rotate-s-loader {
+@keyframes lds-ring {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
-    border-color: transparent transparent transparent transparent;
-  }
-  33% {
-    -webkit-transform: rotate(120deg);
-            transform: rotate(120deg);
-    border-color: red transparent transparent transparent;
-  }
-  66% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
-    border-color: red red transparent transparent;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-    border-color: red red red transparent;
+    -webkit-transform: rotate(225.5deg);
+            transform: rotate(225.5deg);
+  }
+}
+
+@-webkit-keyframes lds-ring2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(135.5deg);
+            transform: rotate(135.5deg);
+  }
+}
+
+@keyframes lds-ring2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(135.5deg);
+            transform: rotate(135.5deg);
+  }
+}
+
+@-webkit-keyframes lds-ring3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45.5deg);
+            transform: rotate(45.5deg);
+  }
+}
+
+@keyframes lds-ring3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45.5deg);
+            transform: rotate(45.5deg);
   }
 }
 
@@ -277,8 +328,6 @@ a.nav-item:hover {
           transform: translate(0, 20%);
   position: absolute;
   background-color: #2F44AE;
-  -webkit-animation: rotate-s-loader 1s linear infinite;
-          animation: rotate-s-loader 1s linear infinite;
 }
 
 .container-two {
