@@ -199,6 +199,16 @@ background:none !important;
     margin: 12.5px;
     border-radius: 50%;
   }
+  .circle2{
+    background-color:white;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin: 12.5px;
+    border-radius: 50%;
+  }
   .lds-ring div:nth-child(1) {
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) forwards;
     animation-delay: -0.45s;
