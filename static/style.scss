@@ -164,9 +164,8 @@ background:none !important;
   
   }
   .skill-list{
-    height:15vh;
     width:100%;
-    border:1px solid #E2F3F5;
+    height: 25vh; 
     position:absolute;
     transform: translate(0,110%);
   }
@@ -311,30 +310,31 @@ transform: translate(-5%,30%);
   font-weight:400;
   position: relative;
   text-align: left;
+  left:5%;
   width:13vw;
   padding-top:30px;
-  transform: translate(0,100%);
+  transform: translate(0,80%);
   border-style: none none double none;
   }
   .skill-list{
-    height:15vh;
+    height:25vh;
     width:30vw;
-    border:1px solid #E2F3F5;
     position:absolute;
-    transform: translate(0,90%);
+    transform: translate(0,50%);
   }
- 
+ #icon_div{
+   margin-right:30px;
+ }
 
   .rectangle{
+  left: 5%;
   height:33vh;
   width:30vw;
   
   }
   .container-two{
 
-  
     #about-container{
-
       text-align: left;
       padding-bottom: 1%;
       top:5%;
@@ -343,7 +343,6 @@ transform: translate(-5%,30%);
     #greg{
       font-size:2.5rem;
       }
-  
     .about-p{
       color:white;
       font-size:1.2rem;
@@ -395,10 +394,12 @@ transform: translate(-10%,-10%);
   .skill-list{
     height:15vh;
     width:30vw;
-    border:1px solid #E2F3F5;
     position:absolute;
     left:10%;
     transform: translate(0,20%);
+  }
+  #icon_div{
+    margin-right:30px;
   }
   .rectangle{
   top:25%;
@@ -485,11 +486,13 @@ height:150vh;
     height:15vh;
     margin-top:3%;
     width:70vw;
-    border:1px solid #E2F3F5;
     position:relative!important;
     transform: translate(0,0);
   }
 
+  #icon_div{
+    margin-right:30px;
+  }
   .rectangle{
     top:0%!important;
     padding-bottom:5%;
@@ -549,6 +552,7 @@ transform: translate(0,10%);
 position: absolute;
 }
 #about .container-two{
+  padding-top: 10%;
 position: relative;
 display:block;
 left:0%;
@@ -556,12 +560,11 @@ top:55%;
 transform: translate(0,0);
 width:90vw;
 line-height:1;
+} 
 }
 #projects{
-height:220vh;
-}
-}
-
+  height:220vh;
+    }
 
 h1#appTitle{
 font-family: "simplifica", sans serif;
@@ -577,6 +580,7 @@ border-bottom: 1px solid #E2F3F5;
 
 }
  #album{
+
   height:100vh;
   
  }

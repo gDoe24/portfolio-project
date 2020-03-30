@@ -193,9 +193,8 @@ a.nav-item:hover {
 }
 
 .skill-list {
-  height: 15vh;
   width: 100%;
-  border: 1px solid #E2F3F5;
+  height: 25vh;
   position: absolute;
   -webkit-transform: translate(0, 110%);
           transform: translate(0, 110%);
@@ -334,12 +333,13 @@ a.nav-item:hover {
   }
 }
 
-.rectangle {
-  width: 100%;
+#rec_img {
   -webkit-transform: translate(0, 20%);
           transform: translate(0, 20%);
   position: absolute;
-  background-color: #2F44AE;
+  left: 5%;
+  height: 40vh;
+  width: 35vw;
 }
 
 .container-two {
@@ -406,23 +406,27 @@ a.nav-item:hover {
     font-weight: 400;
     position: relative;
     text-align: left;
+    left: 5%;
     width: 13vw;
     padding-top: 30px;
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
+    -webkit-transform: translate(0, 80%);
+            transform: translate(0, 80%);
     border-style: none none double none;
   }
   .skill-list {
-    height: 15vh;
+    height: 25vh;
     width: 30vw;
-    border: 1px solid #E2F3F5;
     position: absolute;
-    -webkit-transform: translate(0, 90%);
-            transform: translate(0, 90%);
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
   }
-  .rectangle {
-    height: 33vh;
-    width: 30vw;
+  #icon_div {
+    margin-right: 30px;
+  }
+  #rec_img {
+    -webkit-transform: translate(-70%, -40);
+            transform: translate(-70%, -40);
+    right: 10%;
   }
   .container-two #about-container {
     text-align: left;
@@ -488,11 +492,13 @@ a.nav-item:hover {
   .skill-list {
     height: 15vh;
     width: 30vw;
-    border: 1px solid #E2F3F5;
     position: absolute;
     left: 10%;
     -webkit-transform: translate(0, 20%);
             transform: translate(0, 20%);
+  }
+  #icon_div {
+    margin-right: 30px;
   }
   .rectangle {
     top: 25%;
@@ -584,10 +590,12 @@ a.nav-item:hover {
     height: 15vh;
     margin-top: 3%;
     width: 70vw;
-    border: 1px solid #E2F3F5;
     position: relative !important;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+  }
+  #icon_div {
+    margin-right: 30px;
   }
   .rectangle {
     top: 0% !important;
@@ -651,6 +659,7 @@ a.nav-item:hover {
     position: absolute;
   }
   #about .container-two {
+    padding-top: 10%;
     position: relative;
     display: block;
     left: 0%;
@@ -660,9 +669,10 @@ a.nav-item:hover {
     width: 90vw;
     line-height: 1;
   }
-  #projects {
-    height: 220vh;
-  }
+}
+
+#projects {
+  height: 220vh;
 }
 
 h1#appTitle {
